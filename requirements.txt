@@ -1,0 +1,55 @@
+# Jommi Tomi - Python Dependencies
+# نظام تومي جومي - المكتبات المطلوبة
+
+# Web Framework
+Flask==2.3.3
+Flask-CORS==4.0.0
+
+# API and HTTP
+requests==2.31.0
+python-dotenv==1.0.0
+
+# Data Processing
+numpy==1.24.3
+pandas==2.0.3
+
+# Image Processing
+Pillow==10.0.0
+opencv-python==4.8.0.76
+
+# Audio Processing
+librosa==0.10.0
+soundfile==0.12.1
+
+# Video Processing
+moviepy==1.0.3
+
+# Data Serialization
+pyyaml==6.0
+
+# Logging and Monitoring
+python-logging-loki==0.3.2
+
+# Testing
+pytest==7.4.0
+pytest-cov==4.1.0
+
+# Code Quality
+black==23.7.0
+flake8==6.0.0
+pylint==2.17.5
+
+# Database (Optional - for production)
+SQLAlchemy==2.0.20
+psycopg2-binary==2.9.7
+
+# Task Queue (Optional - for async processing)
+celery==5.3.1
+redis==5.0.0
+
+# API Documentation
+flasgger==0.9.7.1
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3

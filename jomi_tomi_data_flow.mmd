@@ -1,0 +1,65 @@
+graph TD
+    %% Global Styling
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    classDef startNode fill:#e1f5fe,stroke:#01579b,stroke-width:3px;
+    classDef processingNode fill:#fff3e0,stroke:#e65100,stroke-width:2px;
+    classDef outputNode fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px;
+    classDef externalService fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,stroke-dasharray: 5 5;
+
+    %% Nodes Definition
+    Start((Start Project)):::startNode
+    
+    subgraph Input_Phase [مرحلة الإدخال والتحليل]
+        N1[1. إدارة المشروع]:::processingNode
+        N2[2. إدخال بيانات العميل]:::processingNode
+        N3[3. تحليل الصورة]:::processingNode
+        N4[4. اختيار النمط الفني]:::processingNode
+    end
+
+    subgraph Creative_Phase [مرحلة الإبداع والتوليد]
+        N5[5. توليد السكريبت]:::processingNode
+        N6[6. توليد الشخصية]:::processingNode
+        N7[7. توليد المشاهد الثابتة]:::processingNode
+        N8{8. اعتماد العميل}:::processingNode
+    end
+
+    subgraph Production_Phase [مرحلة الإنتاج النهائي]
+        N9[9. توليد الفيديو]:::processingNode
+        N10[10. دمج الصوت]:::processingNode
+        N11[11. محتوى السوشيال ميديا]:::processingNode
+        N12[12. النشر النهائي]:::outputNode
+    end
+
+    %% External Services
+    S_Magnific[Magnific.ai]:::externalService
+    S_Runway[Runway/Pika]:::externalService
+    S_Eleven[ElevenLabs]:::externalService
+
+    %% Data Flow Connections
+    Start --> N1
+    N1 -- "Project ID" --> N2
+    N2 -- "Child Photo & Info" --> N3
+    N3 -- "Character Features" --> N4
+    N4 -- "Art Style Parameters" --> N5
+    
+    N5 -- "Story Script" --> N6
+    N6 -- "Character Sheet" --> S_Magnific
+    S_Magnific -- "Pixar Character" --> N7
+    
+    N7 -- "16:9 & A4 Frames" --> N8
+    
+    N8 -- "Approved Frames" --> N9
+    N8 -- "Approved Frames" --> N11
+    
+    N9 -- "Raw Video" --> S_Runway
+    S_Runway -- "Animated Video" --> N10
+    
+    N5 -- "Narrative Text" --> S_Eleven
+    S_Eleven -- "Voice Over" --> N10
+    
+    N10 -- "Final Video" --> N11
+    N11 -- "Reels, Covers, Posts" --> N12
+
+    %% Styling specific nodes
+    class N12 outputNode;
+    class S_Magnific,S_Runway,S_Eleven externalService;

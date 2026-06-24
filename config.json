@@ -1,0 +1,185 @@
+{
+  "system": {
+    "name": "Jommi Tomi - Node-based Command & Control System",
+    "version": "1.0",
+    "author": "Manus AI",
+    "date": "2026-05-06"
+  },
+  "api": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": true,
+    "cors_enabled": true
+  },
+  "art_styles": {
+    "pixar": {
+      "name": "Pixar Style",
+      "description": "Modern Pixar 3D animation with exaggerated, expressive features",
+      "color_saturation": "high",
+      "lighting": "cinematic",
+      "render_quality": "8k",
+      "feature_exaggeration": "moderate"
+    },
+    "disney": {
+      "name": "Disney Style",
+      "description": "Classic Disney animation with timeless character design",
+      "color_saturation": "high",
+      "lighting": "warm",
+      "render_quality": "high",
+      "feature_exaggeration": "moderate"
+    },
+    "dreamworks": {
+      "name": "DreamWorks Style",
+      "description": "DreamWorks animation with modern CGI rendering",
+      "color_saturation": "high",
+      "lighting": "dramatic",
+      "render_quality": "8k",
+      "feature_exaggeration": "high"
+    },
+    "studio_ghibli": {
+      "name": "Studio Ghibli Style",
+      "description": "Hand-drawn animation style inspired by Studio Ghibli",
+      "color_saturation": "medium",
+      "lighting": "natural",
+      "render_quality": "high",
+      "feature_exaggeration": "low"
+    },
+    "anime": {
+      "name": "Anime Style",
+      "description": "Japanese anime style with expressive eyes and features",
+      "color_saturation": "high",
+      "lighting": "bright",
+      "render_quality": "high",
+      "feature_exaggeration": "high"
+    }
+  },
+  "story_themes": {
+    "magical_adventure": {
+      "name": "Magical Adventure",
+      "description": "An epic journey through magical realms",
+      "scene_count": 3,
+      "tone": "adventurous"
+    },
+    "underwater_quest": {
+      "name": "Underwater Quest",
+      "description": "An adventure in the depths of the ocean",
+      "scene_count": 3,
+      "tone": "mysterious"
+    },
+    "space_explorer": {
+      "name": "Space Explorer",
+      "description": "A journey through the cosmos and distant planets",
+      "scene_count": 3,
+      "tone": "futuristic"
+    },
+    "enchanted_forest": {
+      "name": "Enchanted Forest",
+      "description": "Discovering secrets in an ancient enchanted forest",
+      "scene_count": 3,
+      "tone": "mystical"
+    },
+    "time_traveler": {
+      "name": "Time Traveler",
+      "description": "Traveling through different time periods",
+      "scene_count": 3,
+      "tone": "historical"
+    }
+  },
+  "prompts": {
+    "character_generation": {
+      "base_prompt": "A highly detailed, 3D rendered portrait of a [Age]-year-old [Gender] child in the style of a modern Pixar or Disney animation. The child has [Hair Color and Style], [Eye Color] eyes, and a [Facial Expression/Feature]. They are wearing [Clothing Description]. The lighting is soft, cinematic, and magical, with vibrant colors and exaggerated, expressive, yet charming facial features. High quality, 8k resolution, masterpiece, octane render, unreal engine 5.",
+      "negative_prompt": "ugly, deformed, poorly drawn, realistic, photographic, anime, 2d, text, watermark, extra limbs, bad anatomy"
+    },
+    "character_sheet": {
+      "base_prompt": "A comprehensive 3D character design model sheet of a [Age]-year-old [Gender] child in Pixar animation style. The sheet includes multiple angles: front view, side profile, three-quarter view, and back view. The character has [Hair Color and Style], [Eye Color] eyes, and is wearing [Clothing Description]. The background is a neutral, solid light gray color. The character's expressions are neutral but expressive. High resolution, clean lines, professional character design turnaround, 8k, highly detailed.",
+      "negative_prompt": "ugly, deformed, poorly drawn, realistic, photographic, anime, 2d, text, watermark, extra limbs, bad anatomy"
+    },
+    "scene_generation": {
+      "base_prompt": "A cinematic, wide-angle shot in Pixar 3D animation style. The main character, a [Age]-year-old [Gender] child with [Hair Color] and [Clothing Description], is [Action/Pose] in a [Setting/Environment]. The lighting is dramatic and magical, with glowing particles and soft shadows. Vibrant colors, highly detailed environment, emotional storytelling, 8k resolution, masterpiece. Aspect ratio: [16:9 for video / 3:4 or A4 ratio for print].",
+      "negative_prompt": "ugly, deformed, poorly drawn, realistic, photographic, anime, 2d, text, watermark, extra limbs, bad anatomy"
+    },
+    "scene_closeup": {
+      "base_prompt": "A close-up portrait shot in Pixar 3D animation style. The main character, a [Age]-year-old [Gender] child with [Hair Color], is showing a [Emotion]. The background is beautifully blurred (bokeh effect) showing hints of a [Setting]. Soft, warm rim lighting on the character's hair, highly expressive eyes, detailed textures, cinematic lighting, 8k resolution.",
+      "negative_prompt": "ugly, deformed, poorly drawn, realistic, photographic, anime, 2d, text, watermark, extra limbs, bad anatomy"
+    },
+    "video_motion_subtle": {
+      "base_prompt": "Subtle, cinematic motion. The child's hair blows gently in the wind, and they blink naturally. The camera slowly pans forward (dolly in). The magical glowing elements in the background twinkle softly. High quality, smooth animation, consistent character.",
+      "negative_prompt": "jerky, unnatural, distorted, blurry"
+    },
+    "video_motion_active": {
+      "base_prompt": "Dynamic motion. The child [Action]. The camera follows the movement smoothly. The environment reacts to the movement, with [Environmental Effect]. Cinematic lighting, high frame rate, smooth transition.",
+      "negative_prompt": "jerky, unnatural, distorted, blurry"
+    },
+    "book_cover": {
+      "base_prompt": "A magical and captivating children's book cover in Pixar 3D animation style. The main character, a [Age]-year-old [Gender] child, is standing in the center, looking up at a [Magical Element]. The title area at the top is left blank with negative space for text. Vibrant, eye-catching colors, bold composition, magical atmosphere, highly detailed, 8k resolution. Aspect ratio: 3:4.",
+      "negative_prompt": "ugly, deformed, poorly drawn, realistic, photographic, anime, 2d, text, watermark, extra limbs, bad anatomy"
+    },
+    "promotional_post": {
+      "base_prompt": "A vibrant, engaging promotional image in Pixar 3D style. The main character is holding a glowing, magical storybook that is emitting soft light onto their face. They are looking directly at the camera with an inviting smile. The background is a colorful, abstract magical realm. High contrast, saturated colors, perfect for social media, 8k resolution. Aspect ratio: 1:1 or 4:5.",
+      "negative_prompt": "ugly, deformed, poorly drawn, realistic, photographic, anime, 2d, text, watermark, extra limbs, bad anatomy"
+    }
+  },
+  "output_formats": {
+    "video": {
+      "format": "mp4",
+      "resolution": "1920x1080",
+      "fps": 30,
+      "bitrate": "5000k"
+    },
+    "print": {
+      "format": "png",
+      "resolution": "300dpi",
+      "size": "A4",
+      "color_space": "RGB"
+    },
+    "social_media": {
+      "instagram_reel": {
+        "format": "mp4",
+        "resolution": "1080x1920",
+        "fps": 30,
+        "duration": "15-90 seconds"
+      },
+      "tiktok": {
+        "format": "mp4",
+        "resolution": "1080x1920",
+        "fps": 30,
+        "duration": "15-60 seconds"
+      },
+      "instagram_post": {
+        "format": "png",
+        "resolution": "1080x1080",
+        "aspect_ratio": "1:1"
+      },
+      "facebook": {
+        "format": "png",
+        "resolution": "1200x628",
+        "aspect_ratio": "16:9"
+      }
+    }
+  },
+  "external_services": {
+    "magnific_ai": {
+      "enabled": true,
+      "api_endpoint": "https://api.magnific.ai/v1",
+      "timeout": 300
+    },
+    "elevenlabs": {
+      "enabled": true,
+      "api_endpoint": "https://api.elevenlabs.io/v1",
+      "timeout": 60,
+      "voice_id": "default_child_voice"
+    },
+    "runway_ml": {
+      "enabled": true,
+      "api_endpoint": "https://api.runwayml.com/v1",
+      "timeout": 600
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "[%(asctime)s] %(name)s - %(levelname)s - %(message)s",
+    "file": "logs/jommi_tomi.log",
+    "max_size": "10MB",
+    "backup_count": 5
+  }
+}
